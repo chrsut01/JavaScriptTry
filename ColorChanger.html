@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="ColorChanger" content="width=device-width, initial-scale=1">
+    <style>
+        .dropbtn {
+            background-color: violet;
+            color: black;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ddd;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 10px;
+
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 10px;
+
+        }
+
+        .dropdown-content a:hover {background-color: darkgray;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {color: grey; background-color: plum;}
+    </style>
+    <title></title>
+</head>
+<body style="background-color:white;">
+
+<h2>Background Color Changer</h2>
+<p>Move the mouse over the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+    <button class="dropbtn">Choose a Color</button>
+    <div class="dropdown-content">
+        <a href="#" style="color:red" onclick="red()">Red</a>
+        <a href="#"  style="color:blue" onclick="blue()">Blue</a>
+        <a href="#"  style="color:green" onclick="green()">Green</a>
+        <a href="#"  style="color:yellow" onclick="yellow()">Yellow</a>
+        <a href="#"  style="color:orange" onclick="orange()">Orange</a>
+        <a href="#"  style="color:pink" onclick="pink()">Pink</a>
+        <a href="#"  style="color:white" onclick="white()">White</a>
+
+
+    </div>
+</div>
+
+<script>
+
+    function red(){
+        document.body.style.backgroundColor = "red";
+    }
+    function blue(){
+        document.body.style.backgroundColor = "blue";
+    }
+    function green(){
+        document.body.style.backgroundColor = "green";
+    }
+    function yellow(){
+        document.body.style.backgroundColor = "yellow";
+    }
+    function orange(){
+        document.body.style.backgroundColor = "orange";
+    }
+    function pink(){
+        document.body.style.backgroundColor = "pink";
+    }
+    function white(){
+        document.body.style.backgroundColor = "white";
+    }
+
+
+
+</script>
+
+</body>
+</html>
