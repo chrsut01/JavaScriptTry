@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+<h1>Guess the number game</h1>
+
+<button onclick="Start()">START</button>
+
+<p id="openingLine"></p>
+<br>
+
+<input type = "number" id="guess"/>
+<button id="GuessButton" onclick="Guess()">Am I right?</button>
+<br>
+<p id="result"></p>
+
+<script>
+
+        function Start(){
+            tally = 0;
+            document.getElementById("GuessButton").disabled = false;
+            openingLine.innerHTML = "Computer is thinking of a number between 1 and 100.<br>Try to guess what it is..."
+            document.getElementById("result").innerHTML = "";
+        }
+        function getRndInteger() {
+            return Math.floor(Math.random() * (100 - 1)) + 1;
+        }
+
+            var success = false;
+            var tally = 0;
+            const numberToGuess = getRndInteger();
+
+            function Guess() {
+                tally++;
+                let guess = parseInt(document.getElementById("guess").value);
+
+                if (guess < numberToGuess) {
+                    result.innerHTML = guess + " is too low. Guess again...<br>Number of guesses so far: " + tally;
+                    document.getElementById("guess").value = "";
+                }
+                else if (guess > numberToGuess) {
+                    result.innerHTML = guess + " is too high. Guess again...<br>Number of guesses so far: " + tally;
+                    document.getElementById("guess").value = "";
+
+                }
+                else if( guess == numberToGuess){
+                    result.innerHTML = "Yes! " + numberToGuess + " is the correct number. Congratulations!<br>Total number of guesses: " + tally;
+                    document.getElementById("guess").value = "";
+                    success = true;
+                    tally = 0;
+                    document.getElementById("GuessButton").disabled = true;
+                    document.getElementById("openingLine").innerHTML = "";
+
+                }
+                else{
+                    result.innerHTML = "Invalid input. Try again."
+                    if(tally > 0) {
+                        tally--;
+
+                    }
+                }
+    }
+
+</script>
+
+</body>
+</html>

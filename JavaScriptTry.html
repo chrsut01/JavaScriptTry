@@ -1,0 +1,78 @@
+<html lang="">
+    <body>
+            <h1>Calculator</h1>
+
+            <p>Enter two numbers for calculation:</p>
+            <input type = "number" id="x"/>
+            <input type = "number" id="y"/>
+            <button onclick="_clear()">Clear</button>
+            <button onclick="_switch()">Switch</button>
+            <br>
+            <br>
+            <button onclick="add()">Add</button>
+            <br>
+            <button onclick="subtract()">Subtract</button>
+            <br>
+            <button onclick="multiply()">Multiply</button>
+            <br>
+            <button onclick="divide()">Divide</button>
+            <br>
+            <button onclick="modulus()">Modulus</button>
+            <br>
+            <p>Result is:</p>
+            <p id="result"></p>
+
+                <script>
+                        function add(){
+                            let x = parseInt(document.getElementById("x").value);
+                            y = parseInt(document.getElementById("y").value);
+                            sum = x + y;
+                            result.innerHTML = sum;
+                        }
+
+                        function subtract(){
+                            x = parseInt(document.getElementById("x").value);
+                            y = parseInt(document.getElementById("y").value);
+                            diff =  x - y;
+                            result.innerHTML = diff;
+                        }
+
+                        function multiply(){
+                            x = parseInt(document.getElementById("x").value);
+                            y = parseInt(document.getElementById("y").value);
+                            prod =  x * y;
+                            result.innerHTML = prod;
+                        }
+
+                        function divide(){
+                            x = parseInt(document.getElementById("x").value);
+                            y = parseInt(document.getElementById("y").value);
+                            quot = x / y;
+                            result.innerHTML = quot;
+                        }
+
+                        function modulus(){
+                                x = parseInt(document.getElementById("x").value);
+                                y = parseInt(document.getElementById("y").value);
+                                mod = x % y;
+                                result.innerHTML = mod;
+                        }
+
+                        function _clear(){
+                            document.getElementById("x").value = "";
+                            document.getElementById("y").value = "";
+                            document.getElementById("result").innerHTML = "";
+                        }
+
+                        function _switch(){
+                            x = parseInt(document.getElementById("x").value);
+                            y = parseInt(document.getElementById("y").value);
+                            document.getElementById("x").value = y;
+                            document.getElementById("y").value = x;
+                                document.getElementById("result").innerHTML = "";
+
+                        }
+
+                </script>
+        </body>
+</html>
