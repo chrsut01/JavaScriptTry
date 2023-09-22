@@ -44,7 +44,6 @@
                 else if (guess > numberToGuess) {
                     result.innerHTML = guess + " is too high. Guess again...<br>Number of guesses so far: " + tally;
                     document.getElementById("guess").value = "";
-
                 }
                 else if( guess == numberToGuess){
                     result.innerHTML = "Yes! " + numberToGuess + " is the correct number. Congratulations!<br>Total number of guesses: " + tally;
@@ -53,7 +52,6 @@
                     tally = 0;
                     document.getElementById("GuessButton").disabled = true;
                     document.getElementById("openingLine").innerHTML = "";
-
                 }
                 else{
                     result.innerHTML = "Invalid input. Try again."
@@ -62,7 +60,7 @@
 
                     }
                 }
-    }
+            }
 
 </script>
 
