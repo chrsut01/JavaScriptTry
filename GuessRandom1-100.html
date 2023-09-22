@@ -24,6 +24,7 @@
             document.getElementById("GuessButton").disabled = false;
             openingLine.innerHTML = "Computer is thinking of a number between 1 and 100.<br>Try to guess what it is..."
             document.getElementById("result").innerHTML = "";
+            numberToGuess = getRndInteger();
         }
         function getRndInteger() {
             return Math.floor(Math.random() * (100 - 1)) + 1;
@@ -31,7 +32,7 @@
 
             var success = false;
             var tally = 0;
-            const numberToGuess = getRndInteger();
+            var numberToGuess = getRndInteger();
 
             function Guess() {
                 tally++;
